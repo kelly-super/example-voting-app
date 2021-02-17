@@ -5,11 +5,7 @@ remote.user = 'root'
 remote.password = 'q1%PB5ALqxpGsyEy'
 remote.allowAnyHosts = true
 pipeline {
-  agent {
-    node {
-      label 'ubuntu-1604-aufs-stable'
-    }
-  }
+  agent any
   
   environment {
     DISABLE_AUTH = 'true'
