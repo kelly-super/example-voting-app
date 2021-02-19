@@ -98,7 +98,7 @@ pipeline {
     }
     stage('Deployment') {
       steps {
-        sh 'cd /Users/leoliang/projects/example-voting-app && ' +
+        sh 'cd /projects/example-voting-app && ' +
         'git pull && ' +
         'docker-compose pull && ' +
         'docker-compose down && ' +
