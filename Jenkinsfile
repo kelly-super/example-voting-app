@@ -100,7 +100,7 @@ pipeline {
       steps {
         sh 'cd /Users/leoliang/projects/example-voting-app && ' +
         'git pull && ' +
-        'docker-compose pull &&  +
+        'docker-compose pull && ' +
         'docker-compose down && ' +
         'docker-compose up -d && ' + 
         'docker-compose ps' 
