@@ -1,3 +1,3 @@
 set -ex
-
-npx cypress run --spec "cypress/integration/examples/actions.spec.js"
+node --version
+npm run cypress run --spec "cypress/integration/examples/actions.spec.js"
