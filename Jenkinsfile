@@ -26,9 +26,9 @@ pipeline {
     stage('Cypress Integration Testing') {
       steps {
         sh 'echo Start Cypress Integration Testing'
-        sh '[ ! -d "./learnCypress2" ] && echo "Directory /learnCypress2 does not exists" &&  git clone https://github.com/nzleoliang/learnCypress2.git'
-        sh 'cd learnCypress2 && npm install && npx cypress run --spec ./cypress/integration/examples/action.spec.js'
-      }
+        sh './getCypressCode.sh'
+        sh './executeCypressTest.sh'
+     }
     }
     stage('Build Result Image') {
       steps {
@@ -51,13 +51,13 @@ pipeline {
       steps {
         parallel(
           Chrome: {
-            echo "This is branch a"
+            echo "Running E2E Testing on Chrome"
           },
           Firefox: {
-            echo "This is branch b"
+            echo "Running E2E Testing on Firefox"
           },
           Safari: {
-            echo "This is branch b"
+            echo "Running E2E Testing on Safari"
           }
         )
       }    
