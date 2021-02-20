@@ -13,11 +13,6 @@ pipeline {
   }
   
   stages {
-    stage('Update Source Code') {
-      steps {
-        sh 'git pull'
-      }
-    } 
     stage('Static Check') {
       steps {
         sh 'echo Static Check'
