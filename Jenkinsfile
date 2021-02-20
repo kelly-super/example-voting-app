@@ -26,7 +26,7 @@ pipeline {
     stage('Cypress Integration Testing') {
       steps {
         sh 'echo Start Cypress Integration Testing'
-        sh 'git clone https://github.com/nzleoliang/learnCypress2.git'
+        sh '[ ! -d "./learnCypress2" ] && echo "Directory /learnCypress2 does not exists" &&  git clone https://github.com/nzleoliang/learnCypress2.git'
         sh 'cd learnCypress2 && npm install && npx cypress run --spec ./cypress/integration/examples/action.spec.js'
       }
     }
