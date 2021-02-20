@@ -1,8 +1,8 @@
 def remote = [:]
 remote.name = 'web server'
-remote.host = '45.76.126.131'
-remote.user = 'root'
-remote.password = 'q1%PB5ALqxpGsyEy'
+remote.host = '45.63.27.112'
+remote.user = 'don'
+remote.password = 'cypressjenkins'
 remote.allowAnyHosts = true
 pipeline {
   agent any
@@ -98,12 +98,13 @@ pipeline {
     }
     stage('Deployment') {
       steps {
-        sh 'cd /projects/example-voting-app && ' +
-        'git pull && ' +
-        'docker-compose pull && ' +
-        'docker-compose down && ' +
-        'docker-compose up -d && ' + 
-        'docker-compose ps' 
+        sshCommand remote: remote, command: 
+        "cd /home/don/projects/example-voting-app && " +
+        "git pull && " +
+        "docker-compose pull && " +
+        "docker-compose down && " +
+        "docker-compose up -d && " + 
+        "docker-compose ps" 
       }
     }
   }
