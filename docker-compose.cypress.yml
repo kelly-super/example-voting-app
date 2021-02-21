@@ -6,5 +6,4 @@ services:
     container_name: cypress_e2e
     working_dir: /e2e
     volumes:
-      - ./voting_app_cypress/cypress.json:/e2e/cypress.json
-      - ./voting_app_cypress/cypress:/e2e/cypress
+      - ./voting_app_cypress:/e2e
