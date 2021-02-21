@@ -6,7 +6,7 @@ set -ex
 cd voting_app_cypress
 
 # docker run -it -v $PWD:/e2e -w /e2e cypress/included:5.0.0
- 
+npm install
 npx cypress run
 
 cd -
