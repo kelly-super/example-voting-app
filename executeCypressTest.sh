@@ -5,6 +5,8 @@ set -ex
 
 cd voting_app_cypress
 
-docker run -it -v $PWD:/e2e -w /e2e cypress/included:5.0.0
+# docker run -it -v $PWD:/e2e -w /e2e cypress/included:5.0.0
  
+npx cypress run
+
 cd -
