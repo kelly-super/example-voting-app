@@ -1,6 +1,6 @@
 set -ex
 
-if [ ! -d "./learnCypress2" ]; then
+if [ ! -d "./voting_app_cypress" ]; then
   echo "cloning cypress code..."
   git clone --depth=1 https://github.com/nzleoliang/voting_app_cypress.git
 else
