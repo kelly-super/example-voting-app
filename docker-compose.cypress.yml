@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  cypress:
+    image: cypress/included:3.2.0
+    container_name: cypress_e2e
+    working_dir: /e2e
+    volumes:
+      - ./learnCypress2/cypress.json:/e2e/cypress.json
+      - ./learnCypress2/cypress:/e2e/cypress
