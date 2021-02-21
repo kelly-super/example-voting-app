@@ -6,4 +6,6 @@ if [ ! -d "./voting_app_cypress" ]; then
 else
   echo "cypress directory exists, just pulling the latest code"
   cd voting_app_cypress && git pull && cd -
+  touch cypress.json
+  {} > cypress.json
 fi
