@@ -1,4 +1,4 @@
-set -ex
+set -x
 
 cd voting_app_cypress
 
