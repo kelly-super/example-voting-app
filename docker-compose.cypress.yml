@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   cypress:
-    image: cypress/included:3.2.0
+    image: cypress/included:6.4.0
     container_name: cypress_e2e
     working_dir: /e2e
     volumes:
