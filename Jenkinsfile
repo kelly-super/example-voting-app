@@ -102,7 +102,7 @@ pipeline {
       steps {
         // sshCommand remote: remote, command: 
         sh 'pwd && ls -l '
-        sh 'cd example-voting-app && git pull && ' +
+        sh 
         'docker-compose pull && ' +
         'docker-compose down && ' +
         'docker-compose up -d && ' + 
