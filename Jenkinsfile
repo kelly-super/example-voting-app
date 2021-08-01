@@ -106,7 +106,7 @@ pipeline {
         'docker-compose pull && ' +
         'docker-compose down && ' +
         'docker-compose up -d && ' + 
-        'docker-compose ps" 
+        'docker-compose ps'
       }
     }
   }
