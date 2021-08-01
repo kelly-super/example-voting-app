@@ -1,8 +1,8 @@
 def remote = [:]
 remote.name = 'web server'
-remote.host = '45.63.27.112'
+remote.host = '155.138.145.225'
 remote.user = 'root'
-remote.password = '4P!p*cNsN$qA?PBT'
+remote.password = 'D5c*G@K92STMD,H2'
 remote.allowAnyHosts = true
 pipeline {
   agent any
