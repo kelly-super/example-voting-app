@@ -82,7 +82,7 @@ pipeline {
       }
       steps {
         withDockerRegistry(credentialsId: 'dockerhubid', url:'') {
-          sh 'docker push nzleoliang/vote'
+          sh 'docker push superkelly/vote'
         }
       }
     }
@@ -94,7 +94,7 @@ pipeline {
       }
       steps {
         withDockerRegistry(credentialsId: 'dockerhubid', url:'') {
-          sh 'docker push nzleoliang/worker'
+          sh 'docker push superkelly/worker'
         }
       }
     }
