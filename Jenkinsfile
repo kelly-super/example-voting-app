@@ -70,7 +70,7 @@ pipeline {
       }
       steps {
         withDockerRegistry(credentialsId: 'dockerhubid', url:'') {
-          sh 'docker push nzleoliang/result'
+          sh 'docker push superkelly/result'
         }
       }
     }
