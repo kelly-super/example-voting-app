@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0.0-sdk
+FROM bitnami/dotnet-sdk:latest
 
 WORKDIR /code
 
